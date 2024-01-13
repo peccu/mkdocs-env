@@ -1,0 +1,38 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Pull mkdocs-material",
+      "command": "docker pull squidfunk/mkdocs-material"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "mkdocs new": {
+      "name":"mkdocs new",
+      "command": "mkdocs new .",
+      "runAtStart": false
+    },
+    "serve": {
+      "name": "serve",
+      "command": "mkdocs serve",
+      "runAtStart": false
+    },
+    "serve dirty reload": {
+      "name": "serve dirty reload",
+      "command": "mkdocs serve --dirtyreload",
+      "runAtStart": false
+    },
+    "build": {
+      "name": "build",
+      "command": "mkdocs build",
+      "runAtStart": false
+    },
+    "serve built site": {
+      "name": "serve built site",
+      "command": "cd site; python -m http.server 8080",
+      "runAtStart": false
+    }
+  }
+}
