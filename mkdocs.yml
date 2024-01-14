@@ -2,4 +2,35 @@ site_name: My Docs
 
 theme:
   name: material
+  language: ja
   # name: readthedocs
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+
+plugins:
+  - macros
+#  - enumerate-headings:
+#      increment_across_pages: true
+#      # exclude:
+#      #   - index.md
+  - autorefs
+#  - markdown_inline_graphviz
+#   - awesome-pages
+#   - literate-nav
+#  :
+#      nav_file: nav.md
+  - pagetree
+
+markdown_extensions:
+    - admonition
+    - codehilite:
+        linenums: true
+        guess_lang: false
+        use_pygments: false
+        noclasses: true
+    - toc:
+        permalink: true
+    # - fontawesome_markdown

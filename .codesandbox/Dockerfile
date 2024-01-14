@@ -1,3 +1,5 @@
 FROM python:slim
 
-RUN pip install mkdocs-material
+ADD requirements.txt ./
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt
