@@ -10,29 +10,38 @@
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
     "mkdocs new": {
-      "name":"mkdocs new",
-      "command": "mkdocs new .",
-      "runAtStart": false
+      "name": "mkdocs new",
+      "command": "mkdocs new ."
     },
     "serve": {
       "name": "serve",
       "command": "mkdocs serve",
-      "runAtStart": false
+      "preview": {
+        "port": 8000
+      }
     },
     "serve dirty reload": {
       "name": "serve dirty reload",
       "command": "mkdocs serve --dirtyreload",
-      "runAtStart": false
+      "runAtStart": true,
+      "preview": {
+        "port": 8000
+      }
     },
     "build": {
       "name": "build",
-      "command": "mkdocs build",
-      "runAtStart": false
+      "command": "mkdocs build"
     },
     "serve built site": {
       "name": "serve built site",
       "command": "cd site; python -m http.server 8080",
-      "runAtStart": false
+      "preview": {
+        "port": 8080
+      }
+    },
+    "update requirements": {
+      "name": "update requirements",
+      "command": "pip-compile-multi --live && cp requirements/requirements.txt .codesandbox; echo Done."
     }
   }
 }

@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Welcome to MkDocs (Chapter 0 index)
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
@@ -15,3 +15,45 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org) and [Material 
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+## macro samples
+
+### ./
+
+current dir 直下だけやな
+
+{{ toctree('.') }}
+
+### ./chapter_01
+
+{{ toctree('./chapter_01') }}
+
+## page
+
+{{ page.url }}
+
+config.basedir
+
+- a
+    - {{ config.docs_dir }}
+- b
+{{ test('../../../') }}
+- c
+{{ test('../../') }}
+- d
+{{ test('../') }}
+- e
+{{ test('.') }}
+- f
+{{ test('./chapter_01') }}
+
+## toc ?
+
+{% for page in navigation.pages %}
+- {{ page.title }}, {{ page.file }}, {{ page.url }}, {{ page.file.src_uri }}
+{% endfor %}
+
+
+## macro info
+
+macros_info()
