@@ -3,8 +3,8 @@ site_name: My Docs
 dev_addr: 0.0.0.0:8000
 
 theme:
-  # name: material
-  name: readthedocs
+  name: material
+  # name: readthedocs
   language: ja
   features:
     # ?
