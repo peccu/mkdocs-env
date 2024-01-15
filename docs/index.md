@@ -16,36 +16,9 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org) and [Material 
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
-## macro samples
-
-### ./
-
-current dir 直下だけやな
+## toctree samples
 
 {{ toctree('.') }}
-
-### ./chapter_01
-
-{{ toctree('./chapter_01') }}
-
-## page
-
-{{ page.url }}
-
-config.basedir
-
-- a
-    - {{ config.docs_dir }}
-- b
-{{ test('../../../') }}
-- c
-{{ test('../../') }}
-- d
-{{ test('../') }}
-- e
-{{ test('.') }}
-- f
-{{ test('./chapter_01') }}
 
 ## toc ?
 
@@ -53,7 +26,6 @@ config.basedir
 - {{ page.title }}, {{ page.file }}, {{ page.url }}, {{ page.file.src_uri }}
 {% endfor %}
 
+<!-- ## macro info -->
 
-## macro info
-
-macros_info()
+<!-- macros_info() -->
