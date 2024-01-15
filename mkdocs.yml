@@ -3,28 +3,31 @@ site_name: My Docs
 dev_addr: 0.0.0.0:8000
 
 theme:
-  name: material
+  # name: material
+  name: readthedocs
   language: ja
-  # name: readthedocs
   features:
+    # ?
     - navigation.instant
-    - navigation.sections
+    # Chapter is always open
+    # - navigation.sections
+    # all tree items are expanded
     - navigation.expand
+    # ?
     - toc.integrate
 
 plugins:
+  # used for toctree macro in main.py
   - macros
+  # work like [a normal link to that heading](../doc1.md#hello-world)
+  - autorefs
+
 #  - enumerate-headings:
 #      increment_across_pages: true
 #      # exclude:
 #      #   - index.md
-  - autorefs
-#  - markdown_inline_graphviz
+#   - markdown_inline_graphviz
 #   - awesome-pages
-#   - literate-nav
-#  :
-#      nav_file: nav.md
-  - pagetree
 
 markdown_extensions:
     - admonition

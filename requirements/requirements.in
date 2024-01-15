@@ -4,4 +4,3 @@ pathlib
 pip-compile-multi
 # mkdocs-enumerate-headings-plugin
 mkdocs-autorefs
-mkdocs-pagetree-plugin
