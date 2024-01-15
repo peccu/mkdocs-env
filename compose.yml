@@ -1,9 +1,11 @@
 version: '3.8'
 services:
   app:
-    image: squidfunk/mkdocs-material
-    # for plugin
-    # build: build
+    # image: squidfunk/mkdocs-material
+    build: .codesandbox
+    entrypoint: /bin/bash
+    command: -c "mkdocs serve"
+    working_dir: /docs
     restart: always
     volumes:
       - .:/docs

@@ -16,16 +16,16 @@
     "serve": {
       "name": "serve",
       "command": "mkdocs serve",
+      "runAtStart": true,
       "preview": {
         "port": 8000
       }
     },
     "serve dirty reload": {
       "name": "serve dirty reload",
-      "command": "mkdocs serve --dirtyreload",
-      "runAtStart": true,
+      "command": "mkdocs serve -a 0.0.0.0:8050 --dirtyreload"
       "preview": {
-        "port": 8000
+        "port": 8050
       }
     },
     "build": {
@@ -41,7 +41,7 @@
     },
     "update requirements": {
       "name": "update requirements",
-      "command": "pip-compile-multi --live && cp requirements/requirements.txt .codesandbox; echo Done."
+      "command": "pip-compile-multi --live && pip install -r requirements/requirements.txt && cp requirements/requirements.txt .codesandbox && echo Done."
     }
   }
 }
